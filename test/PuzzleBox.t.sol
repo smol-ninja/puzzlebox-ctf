@@ -29,8 +29,8 @@ contract PuzzleBoxFixture is Test {
 
     function test_win() external initEnv {
         // Uncomment to verify a complete solution.
-        // vm.expectEmit(false, false, false, false, address(_puzzle));
-        // emit Open(address(0));
+        vm.expectEmit(false, false, false, false, address(_puzzle));
+        emit Open(address(0));
         _solution.solve(_puzzle);
     }
 }
